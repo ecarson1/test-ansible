@@ -10,6 +10,7 @@
          group: "{{ security_group }}"
          instance_type: "{{ instance_type }}"
          image: "{{ image }}"
+         profile: ethan.carson
          wait: true
          region: "{{ region }}"
          vpc_subnet_id: "{{ subnet }} "
