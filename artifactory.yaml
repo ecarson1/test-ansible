@@ -28,11 +28,9 @@
       loop: "{{ ec2.instances }}"
 
     - name: Wait for SSH to come up
-      delegate_to: "{{ item.public_dns_name }}"
-      wait_for_connection:
-        delay: 60
-        timeout: 320
-      loop: "{{ ec2.instances }}"
+      delegate_to: localhost
+      wait_for:
+        timeout: 60
 
     - name: Create Route53 record
       route53:
