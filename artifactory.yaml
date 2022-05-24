@@ -10,7 +10,8 @@
          group: "{{ security_group }}"
          instance_type: "{{ instance_type }}"
          image: "{{ image }}"
-         profile: ethan.carson
+         aws_access_key: "{{ access_key }}"
+         aws_secret_key: "{{ secret_key }}"
          wait: true
          region: "{{ region }}"
          vpc_subnet_id: "{{ subnet }} "
