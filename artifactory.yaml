@@ -1,8 +1,6 @@
-- name: Create a bastion host EC2
-  hosts: 127.0.0.1
+- name: Create an Artifactory server
+  hosts: localhost
   gather_facts: False
-  vars:
-    ansible_user: "centos"
   tasks:
     - name: Launch instance
       ec2:
